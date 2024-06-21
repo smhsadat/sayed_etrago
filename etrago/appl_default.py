@@ -57,7 +57,7 @@ args = {
         "formulation": "linopy",
         "market_optimization":
             {
-                "active": True,
+                "active": False,
                 "market_zones": "status_quo", # only used if type='market_grid'
                 "rolling_horizon": {# Define parameter of market optimization
                     "planning_horizon": 168, # number of snapshots in each optimization
@@ -68,7 +68,7 @@ args = {
     },
     "pf_post_lopf": {
         "active": False,  # choose if perform a pf after lopf
-        "add_foreign_lopf": True,  # keep results of lopf for foreign DC-links
+        "add_foreign_lopf": False,  # keep results of lopf for foreign DC-links
         "q_allocation": "p_nom",  # allocate reactive power via 'p_nom' or 'p'
     },
     "start_snapshot": 1,
@@ -89,7 +89,7 @@ args = {
     "scn_decommissioning": None,  # None or decommissioning scenario
     # Export options:
     "lpfile": False,  # save pyomo's lp file: False or /path/to/lpfile.lp
-    "csv_export": "ResultV0",  # save results as csv: False or /path/tofolder
+    "csv_export": "Result_V0",  # save results as csv: False or /path/tofolder
     # Settings:
     "extendable": {
         "extendable_components": [
