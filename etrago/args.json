@@ -22,7 +22,7 @@
         "q_allocation": "p_nom"
     },
     "start_snapshot": 1,
-    "end_snapshot": 200,
+    "end_snapshot": 500,
     "solver": "gurobi",
     "solver_options": {},
     "model_formulation": "kirchhoff",
