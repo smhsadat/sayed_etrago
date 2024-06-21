@@ -53,7 +53,7 @@ args = {
     "gridversion": None,  # None for model_draft or Version number
     "method": {  # Choose method and settings for optimization
         "type": "lopf",  # type of optimization, 'lopf' or 'sclopf'
-        "n_iter": 4,  # abort criterion of iterative optimization, 'n_iter' or 'threshold'
+        "n_iter": 1,  # abort criterion of iterative optimization, 'n_iter' or 'threshold'
         "formulation": "linopy",
         "market_optimization":
             {
