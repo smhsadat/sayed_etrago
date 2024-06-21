@@ -1,20 +1,11 @@
 {
     "db": "egon-data",
     "gridversion": null,
-    "method": { 
-        "type": "lopf",  
+    "method": {
+        "type": "lopf",
         "n_iter": 4,
-        "formulation": "linopy",
-        "market_optimization":
-            {
-                "active": true,
-                "market_zones": "status_quo",
-                "rolling_horizon": {
-                    "planning_horizon": 168,
-                    "overlap": 120
-                 },
-                 "redispatch": true
-             }
+        "pyomo": true,
+        "market_zones": "status_quo"
     },
     "pf_post_lopf": {
         "active": false,
@@ -22,7 +13,7 @@
         "q_allocation": "p_nom"
     },
     "start_snapshot": 1,
-    "end_snapshot": 500,
+    "end_snapshot": 2,
     "solver": "gurobi",
     "solver_options": {},
     "model_formulation": "kirchhoff",
@@ -30,7 +21,7 @@
     "scn_extension": null,
     "scn_decommissioning": null,
     "lpfile": false,
-    "csv_export": "Result",
+    "csv_export": "results",
     "extendable": {
         "extendable_components": [
             "as_in_db"
@@ -69,10 +60,10 @@
     "network_clustering": {
         "active": true,
         "method": "kmedoids-dijkstra",
-        "n_clusters_AC": 100,
+        "n_clusters_AC": 30,
         "cluster_foreign_AC": false,
         "method_gas": "kmedoids-dijkstra",
-        "n_clusters_gas": 100,
+        "n_clusters_gas": 17,
         "cluster_foreign_gas": false,
         "k_elec_busmap": false,
         "k_gas_busmap": false,
